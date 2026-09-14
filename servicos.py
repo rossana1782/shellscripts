@@ -17,19 +17,19 @@ print("O indice -1, tem o valor: ", portas_alvo[-1])
 
 for NUM in range(1,11):
 print(NUM)
- 
+
 #Dicionarios: é um tipo de dado que trabalho sobre chave:valor
- 
+
 status_servico = {
 'host': '8.8.8.8',
 'porta': '443',
 'estado': 'aberta',
 'servico': 'https',
 }
- 
+
 print(status_servico['host'])
 print(status_servico['servico'])
- 
+
 servicos = {
 22: 'SSH',
 80: 'HTTP',
@@ -37,9 +37,11 @@ servicos = {
 3306: 'MYSQL',
 'DNS': 53
 }
- 
+
 for PORTA in portas_alvo:
 nome = servicos.get(PORTA, 'desconhecido')
 print(f'Porta {PORTA}: Servico {nome}')
 
 
+if __name__ == '__main__':
+	main()
